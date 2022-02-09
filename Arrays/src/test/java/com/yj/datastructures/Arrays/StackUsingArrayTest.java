@@ -1,35 +1,35 @@
 package com.yj.datastructures.Arrays;
 
 import com.yj.datastructures.arrays.StackUsingArray;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(SpringRunner.class)
-public class StackUsingArrayTests {
+@DisplayName("Unit testing implementation of Stack using array data-structure")
+class StackUsingArrayTest {
 
-    private StackUsingArray<Integer> stackUsingArray;
+    StackUsingArray<Integer> stackUsingArray;
 
-    @Before
-    public void init() {
+    @BeforeEach
+    void setup() {
         stackUsingArray = new StackUsingArray<>(Integer.class, 3);
     }
 
     @Test
-    public void shouldResultInIllegalArgumentExceptionForInvalidStackSize() {
+    void shouldResultInIllegalArgumentExceptionForInvalidStackSize() {
         String exceptionMessage = "Invalid input passed. Expected Class<?> and size for stack";
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new StackUsingArray<>(Integer.class, -1));
 
-        assertEquals(exceptionMessage, exception.getMessage());
+        Assertions.assertEquals(exceptionMessage, exception.getMessage());
     }
 
     @Test
-    public void shouldResultInIllegalArgumentExceptionForInvalidType() {
+    void shouldResultInIllegalArgumentExceptionForInvalidType() {
         String exceptionMessage = "Invalid input passed. Expected Class<?> and size for stack";
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new StackUsingArray<>(null, 5));
 
@@ -37,7 +37,7 @@ public class StackUsingArrayTests {
     }
 
     @Test
-    public void shouldTestGeneralStackOperation() throws Exception {
+    void shouldTestGeneralStackOperation() throws Exception {
         assertTrue(stackUsingArray.isEmpty());
         stackUsingArray.push(1);
         stackUsingArray.push(2);
@@ -53,19 +53,19 @@ public class StackUsingArrayTests {
     }
 
     @Test
-    public void shouldResultInExceptionWhenPoppedFromEmptyStack() {
+    void shouldResultInExceptionWhenPoppedFromEmptyStack() {
         assertTrue(stackUsingArray.isEmpty());
         assertThrows(EmptyStackException.class, () -> stackUsingArray.pop());
     }
 
     @Test
-    public void shouldResultInExceptionWhenPeekedCalledOnEmptyStack() {
+    void shouldResultInExceptionWhenPeekedCalledOnEmptyStack() {
         assertTrue(stackUsingArray.isEmpty());
         assertThrows(EmptyStackException.class, () -> stackUsingArray.peek());
     }
 
     @Test
-    public void shouldResultInExceptionWhenStackIsFull() throws Exception {
+    void shouldResultInExceptionWhenStackIsFull() throws Exception {
         stackUsingArray.push(1);
         stackUsingArray.push(2);
         stackUsingArray.push(3);
@@ -74,7 +74,7 @@ public class StackUsingArrayTests {
     }
 
     @Test
-    public void shouldReturnElementsInRightOrderAsPushedToStack() throws Exception {
+    void shouldReturnElementsInRightOrderAsPushedToStack() throws Exception {
         stackUsingArray.push(1);
         stackUsingArray.push(2);
         stackUsingArray.push(3);
