@@ -4,13 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <name>LinkedList</name>
-    <description>LinkedList is a linear data structure where objects are stored sequentially but may not be in
-        contiguous memory location. This project implements a LinkedList data structures and different operations that
-        can be done on a LinkedList.
-    </description>
+    <name>Array</name>
+    <description>In this project, various usage of Array as data structure will be implemented</description>
     <groupId>com.github.yj.datastructure</groupId>
-    <artifactId>linkedList</artifactId>
+    <artifactId>array</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <parent>
@@ -48,5 +45,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
