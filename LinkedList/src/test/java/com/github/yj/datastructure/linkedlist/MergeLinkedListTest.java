@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MergeLinkedListTest
-{
+class MergeLinkedListTest {
 
     private MergeLinkedList mergeLinkedList;
 
