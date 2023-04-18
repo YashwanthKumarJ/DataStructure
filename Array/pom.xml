@@ -6,14 +6,14 @@
 
     <name>Array</name>
     <description>In this project, various usage of Array as data structure will be implemented</description>
-    <groupId>com.github.yj.datastructure</groupId>
     <artifactId>array</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
+    <packaging>jar</packaging>
 
     <parent>
-        <groupId>com.github.yj</groupId>
-        <artifactId>datastructure</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>com.github.yashwanth.datastructure</groupId>
+        <artifactId>datastructure-solutions</artifactId>
+        <version>${revision}</version>
     </parent>
 
     <dependencies>
