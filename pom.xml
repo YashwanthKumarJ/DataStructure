@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -5,22 +6,23 @@
 
     <name>DataStructure</name>
     <description>Collection of various DataStructure implementation.</description>
-    <groupId>com.github.yj</groupId>
-    <artifactId>datastructure</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>com.github.yashwanth.datastructure</groupId>
+    <artifactId>datastructure-solutions</artifactId>
+    <version>${revision}</version>
     <packaging>pom</packaging>
 
     <properties>
-        <java.version>16</java.version>
-        <maven.compiler.target>16</maven.compiler.target>
-        <maven.compiler.source>16</maven.compiler.source>
+        <revision>1.0.0-SNAPSHOT</revision>
+        <java.version>17</java.version>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <modules>
-        <module>LinkedList</module>
-        <module>Array</module>
         <module>Tree</module>
+        <module>Array</module>
+        <module>LinkedList</module>
     </modules>
 
     <dependencyManagement>
