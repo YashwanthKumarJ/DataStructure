@@ -1,6 +1,7 @@
 package com.github.yashwanth.datastructure.linkedlist;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@DisplayName("Unit test double reference linked list implementation")
 public class DoubleReferenceLinkedListTest {
 
     DoubleReferenceLinkedList<String> list;
